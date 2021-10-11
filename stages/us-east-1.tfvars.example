@@ -1,0 +1,26 @@
+default_tags = {
+  Automation = "Managed by Terraform"
+}
+
+config = {
+  "example.com" : {
+    fromEmail : "sesforwarder@example.com",
+    emailBucket : "us-east-1-example.com-ses",
+    emailKeyPrefix : "example-emails/",
+    forwardMapping : {
+      "thedoge@example.com" : [
+        "thedoge@gmail.com"
+      ],
+      "benita@example.com" : [
+        "benita@gmail.com"
+      ]
+    }
+  }
+}
+
+rule_set_name = "ses"
+code_uri       = "https://raw.githubusercontent.com/arithmetric/aws-lambda-ses-forwarder"
+code_tag       = "v5.0.0"
+lambda_postfix = "SESForwarder"
+# 'basepath' and 'dirname' functions are used on "zip_path" to form respective variables
+zip_path       = "/tmp/workbench/lambda.zip"
