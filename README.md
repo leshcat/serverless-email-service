@@ -1,4 +1,4 @@
-# Free* Serverless Email Server
+# Free* Serverless Email Service
 
 Complete Terraform module that creates all required infrastructure for your Free* Serverless Email Server.
 
@@ -21,7 +21,7 @@ Lambda code is pure [arithmetric's "aws-lambda-ses-forwarder"](https://github.co
 
 ## Limitations
 
-At this time, AWS SES with 'Email receiving' capability is currently supported only in following regions:
+At this time, AWS SES with "Email receiving" capability is currently supported only in following regions:
 
 * us-east-1 (N. Virginia)
 * eu-west-1 (Ireland)
